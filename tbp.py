@@ -24,9 +24,14 @@ def p(part,l="null"):
             if key[0] == part and len(value) == l:
                 print key,value
     else:
-        for value,key in sorted(set(myblob.tags)):
-            if key == part:
-                print key,value
+        if len(part) == 1:
+            for value,key in sorted(set(myblob.tags)):
+                if key[0] == part:
+                    print key,value
+        else:
+            for value,key in sorted(set(myblob.tags)):
+                if key == part:
+                    print key,value
 
 def start(chars):
     for value,key in sorted(myblob.tags):
