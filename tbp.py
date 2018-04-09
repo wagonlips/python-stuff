@@ -1,4 +1,12 @@
 #!/usr/bin/env python
+import sys
+import textblob
+from textblob import TextBlob
+def o(blob):
+    global myblob
+    with open(r"/home/sean/Documents/text-blobs/" + blob + "") as infile:
+        data = infile.read()
+        myblob = TextBlob(data)
 
 def jj(l="null"):
     if type(l) == int:
