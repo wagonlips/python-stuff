@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import sys
+import twitter
 import textblob
 from textblob import TextBlob
 def o(blob):
