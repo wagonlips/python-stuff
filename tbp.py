@@ -9,16 +9,6 @@ def o(blob):
         data = infile.read()
         myblob = TextBlob(data)
 
-def jj(l="null"):
-    if type(l) == int:
-        for value,key in sorted(set(myblob.tags)):
-            if key[0] == "J" and len(value) == l:
-                print key,value
-    else:
-        for value,key in sorted(set(myblob.tags)):
-            if key[0] == "J":
-                print key,value
-
 def p(part,l="null"):
     if type(l) == int:
         for value,key in sorted(set(myblob.tags)):
