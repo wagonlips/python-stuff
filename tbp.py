@@ -44,3 +44,8 @@ def end(chars,l="null"):
         for value,key in sorted(myblob.tags):
             if value.lower().endswith(chars):
                 print key,value
+
+def pl(l):
+    for value,key in sorted(set(myblob.tags)):
+        if len(value) == l:
+            print key,value
